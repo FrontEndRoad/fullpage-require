@@ -1,0 +1,77 @@
+/*******************************************************
+ *@ Name: HTML5全屏滑动插件（包含全屏滑动、背景音乐、模竖屏、图片预加载、触屏事件等）
+ *@ Time: 2015/5/5
+ *@ Author: FrontEndZQ
+*/
+
+一、注意事项：
+1、基于zepto/touch JS 开发；
+2、通过require JS调用；
+3、封装fullpgae插件；
+
+
+--------------------------------------------------------------------------------------------
+二、使用方法：
+
+页面结构：
+<div class="all">
+	<div class="page page-1-1">
+		<div class="wrap">
+			<p class="wrd">测试数据1-1</p>
+		</div>
+	</div>
+	<div class="page page-1-2 hide">
+		<div class="wrap">
+			<p class="wrd pt-page-moveFromBottom">测试数据1-2</p>
+		</div>
+	</div>
+	<div class="page page-2-1 hide">
+		<div class="wrap">
+			<p class="wrd">测试数据2-1</p>
+		</div>
+	</div>
+	<div class="page page-3-1 hide">
+		<div class="wrap">
+			<p class="wrd pt-page-scaleDownCenterg">3-1</p>
+		</div>
+	</div>
+	<div class="page page-3-2 hide">
+		<div class="wrap">
+			<p class="wrd pt-page-scaleUp">测试数据3-2</p>
+		</div>
+	</div>
+	<div class="page page-3-3 hide">
+		<div class="wrap">
+			<p class="wrd pt-page-scaleUp">测试数据3-3</p>
+		</div>
+	</div>
+</div>
+
+
+CSS设置：
+1、需要引用animatioin.css动画库；
+2、自定义样式：
+	.hide { display: none; }
+	.page { width: 100%; height: 100%; position: absolute; font-size: 100px; text-align: center; overflow: hidden; }
+	.page .wrap { height: 100%; }
+	.page-1-1 {}
+	.page-1-2 {}
+	.page-2-1 {}
+	.page-3-1 {}
+	.page-3-2 {}
+	.page-3-3 {}
+
+
+JS调用：
+$('.page').fullpage({
+	horiNav: true,    //水平导航  true有  false无
+	loop: {			  //循环       
+		h: false,      //水平     true有  false无
+		v: true        //垂直     true有  false无
+	},
+	orient: true,                 //true有  false无
+	music: true,                  //true有  false无
+	musicSrc: 'music/1.mp3'       //背景音乐
+})
+
+
