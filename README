@@ -73,5 +73,9 @@ $('.page').fullpage({
 	music: true,                  //true有  false无
 	musicSrc: 'music/1.mp3'       //背景音乐
 })
+以上功能都可以通过参数（true/false）设置是否需要此项功能，引用相对比较简单。
+
+如有问题或更好建议，请发邮件至：zhangqian0406@yeah.net 
+
 
 
